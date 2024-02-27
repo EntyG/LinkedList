@@ -1,18 +1,4 @@
-#include <iostream>
-
-using namespace std;
-
-struct Node
-{
-	int data;
-	Node* next;
-};
-
-struct linkedList
-{
-	Node* pHead;
-	Node* pTail;
-};
+#include "LinkedList.h"
 
 void addLast(linkedList* l, int data)
 {
@@ -266,45 +252,18 @@ void deleteList(linkedList* l)
 	l->pTail = nullptr;
 }
 
-int main()
+struct DNode
 {
-	linkedList* list1, * list2;
-	list1 = new linkedList;
-	list1->pHead = nullptr;
-	list1->pTail = nullptr;
-	list2 = new linkedList;
-	list2->pHead = nullptr;
-	list2->pTail = nullptr;
-	int input;
-	cin >> input;
-	while (input)
-	{
-		addLast(list1, input);
-		cin >> input;
-	}
-	printList(list1);
-	cout << endl;
-	cin >> input;
-	while (input)
-	{
-		addLast(list2, input);
-		cin >> input;
-	}
-	printList(list2);
-	cout << endl;
-	linkedList* result;
-	result = new linkedList;
-	result->pHead = nullptr;
-	result->pTail = nullptr;
-	sortList(list1->pHead);
-	sortList(list2->pHead);
-	mergeList(list1->pHead, list2->pHead, result);
-	printList(result);
-	deleteList(list1);
-	delete list1;
-	deleteList(list2);
-	delete list2;
-	deleteList(result);
-	delete result;
-	return 0;
+	int data;
+	DNode* pNext, * pPrev;
+};
+
+void insertBeginning(DNode*& pDHead, int x)
+{
+
+}
+
+void insertXafterK(DNode* pDHead, int x, int k)
+{
+
 }
